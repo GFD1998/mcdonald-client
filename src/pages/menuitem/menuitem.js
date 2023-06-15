@@ -1,8 +1,24 @@
-
+import {settings} from "../../config/config";
+import {NavLink, Outlet, useLocation} from "react-router-dom";
+import {useState, useEffect} from "react";
+import useXmlHttp from "../../services/useXmlHttp";
+import {useAuth} from "../../services/useAuth";
 import MenuStyles from "../styles/menu.module.css";
 
 const MenuItem = () => {
+    const {user} = useAuth();
+    const {pathname} = useLocation();
+    const [subHeading, setSubHeading] = useState("All Menu Items");
+    const url = settings.baseApiUrl + "/menuitem";
+    const {
+        error,
+        isLoading,
+        data: menuitem
+    } = useXmlHttp(url, "GET", {Authorization:`Bearer ${user.jwt}`});
 
+    useEffect(() => {
+        setSubHeading("All Menu Items");
+    }, [pathname]);
     async function menuitems(){
         const mi = await fetch("http://localhost/projects/NEWM-N425_Group-4/api/v1/menuitems").then(res => res.json()).then(json => console.log(JSON.stringify(json)));
         // console.log(mi);
