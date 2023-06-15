@@ -1,9 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import AppRoutes from "./config/routes";
+import Navigation from './components/Navigation';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <AppRoutes />
+    </>
+  );
+}
+
+export default App;
+
+
+
+/*    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,8 +31,4 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
-}
-
-export default App;
+    </div> */
