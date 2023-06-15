@@ -1,12 +1,12 @@
-
+import MenuStyles from "../styles/menu.module.css";
 const Ingredient = () => {
     return (
        <>
            <div className="main-heading">
-               <div className="container">Menu Item</div>
+               <div className="container">Ingredients</div>
            </div>
            <div className="sub-heading">
-               <div className="container">Welcome to the McDonald's Dashboard</div>
+               <div className="container">Welcome to the Ingredients Dashboard</div>
            </div>
            <div className="main-content container">
                 

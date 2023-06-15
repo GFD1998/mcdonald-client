@@ -1,12 +1,12 @@
-
+import MenuStyles from "../styles/menu.module.css";
 const Allergen = () => {
     return (
        <>
            <div className="main-heading">
-               <div className="container">Menu Item</div>
+               <div className="container">Allergens</div>
            </div>
            <div className="sub-heading">
-               <div className="container">Welcome to the McDonald's Dashboard</div>
+               <div className="container">Welcome to the Allergens Dashboard</div>
            </div>
            <div className="main-content container">
                 

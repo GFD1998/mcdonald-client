@@ -4,7 +4,7 @@ import Home from "../pages/home";
 import NoMatch from "../pages/nomatch";
 import MenuItem from "../pages/menuitem/menuitem";
 import Allergen from "../pages/allergen/allergen";
-import Ingredient from "../pages/ingredient";
+import Ingredient from "../pages/ingredient/ingredient";
 import NutritionalInformation from "../pages/nutritionalInformation/nutritionalinformation";
 
 import Signin from "../pages/auth/signin";
@@ -24,7 +24,7 @@ const AppRoutes = () => {
                     <Route path="/signin" element={<Signin/>}/>
                     <Route path="/signout" element={<Signout/>}/>
                     <Route path="/signup" element={<Signup/>}/>
-                    <Route path="*" element={<NoMatch/>}/>
+                    {/* <Route path="*" element={<NoMatch/>}/> */}
                 </Route>
             </Routes>
         </BrowserRouter> 
