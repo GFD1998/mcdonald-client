@@ -2,10 +2,10 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/home";
 import NoMatch from "../pages/nomatch";
-import MenuItem from "../pages/menuitem";
-import Allergen from "../pages/allergen";
+import MenuItem from "../pages/menuitem/menuitem";
+import Allergen from "../pages/allergen/allergen";
 import Ingredient from "../pages/ingredient";
-import NutritionalInformation from "../pages/nutritionalinformation";
+import NutritionalInformation from "../pages/nutritionalInformation/nutritionalinformation";
 // import Professors from "../pages/professor/professors";
 
 const AppRoutes = () => {
