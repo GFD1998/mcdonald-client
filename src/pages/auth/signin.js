@@ -17,6 +17,7 @@ const Signin = () => {
             navigate(from, {replace: true});
         });
     }
+
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setAccount({...account, [name]: value});

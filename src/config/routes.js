@@ -6,7 +6,10 @@ import MenuItem from "../pages/menuitem/menuitem";
 import Allergen from "../pages/allergen/allergen";
 import Ingredient from "../pages/ingredient";
 import NutritionalInformation from "../pages/nutritionalInformation/nutritionalinformation";
-// import Professors from "../pages/professor/professors";
+
+import Signin from "../pages/auth/signin";
+import Signout from "../pages/auth/signout";
+import Signup from "../pages/auth/signup";
 
 const AppRoutes = () => {
     return (
@@ -18,6 +21,9 @@ const AppRoutes = () => {
                     <Route path="allergen" element={<Allergen/>}/>
                     <Route path="ingredient" element={<Ingredient/>}/>
                     <Route path="nutritionalinformation" element={<NutritionalInformation/>}/>
+                    <Route path="/signin" element={<Signin/>}/>
+                    <Route path="/signout" element={<Signout/>}/>
+                    <Route path="/signup" element={<Signup/>}/>
                     <Route path="*" element={<NoMatch/>}/>
                 </Route>
             </Routes>
