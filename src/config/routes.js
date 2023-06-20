@@ -24,7 +24,11 @@ const AppRoutes = () => {
                                 <MenuItem/>
                             </RequireAuth>
                         }/>
-                        <Route path="allergen" element={<Allergen/>}/>
+                        <Route path="allergen" element={
+                            <RequireAuth>
+                            <Allergen/>
+                            </RequireAuth>
+                        }></Route>
                         <Route path="ingredient" element={<Ingredient/>}/>
                         <Route path="nutritionalinformation" element={<NutritionalInformation/>}/>
                         <Route path="/signin" element={<Signin/>}/>

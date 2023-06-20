@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import useXmlHttp from "../../services/useXmlHttp";
 import {useAuth} from "../../services/useAuth";
 import MenuStyles from "../styles/menu.module.css";
+import useAxios from "../../services/useAxios";
 
 const Allergen = () => {
     const {user} = useAuth();
@@ -15,7 +16,7 @@ const Allergen = () => {
         error,
         isLoading,
         data: allergens
-    } = useXmlHttp(url, "GET", {Authorization:`Bearer ${user.jwt}`});
+    } = useAxios(url, "GET", {Authorization:"Bearer" + user.jwt});
 
     useEffect(() => {
         setSubHeading("All Allergens");
@@ -29,7 +30,13 @@ const Allergen = () => {
                <div className="container">Welcome to the Allergens Dashboard</div>
            </div>
            <div className="main-content container">
-                
+                   {error && <div>{error}</div>}
+                   {isLoading &&
+                       <div className="image-loading">
+                           Please wait while data is being loaded
+                           <img src={require(`../loading.gif`)} alt="Loading ......"/>
+                       </div>
+                   }
            </div>
        </>
    );

@@ -21,6 +21,8 @@ const Header = () => {
 							<div className="nav-separator">|</div>
                              <NavLink to="/menuitem" className={className}>Menu Items</NavLink>
                             <div className="nav-separator">|</div>
+                            <NavLink to="/allergen" className={className}>Allergens</NavLink>
+                            <div className="nav-separator">|</div>
                             {isAuthed
                                 ? <NavLink to="/signout" className={className}>Sign out</NavLink>
                                 : <NavLink to="/signin" className={className}>Sign in/Sign up</NavLink>
