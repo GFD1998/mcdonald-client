@@ -1,9 +1,8 @@
 nav{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 3rem 3rem;
+    padding: 3rem;
     font-size:2rem;
     font-weight: 700;
     color: #27251F !important;
@@ -14,12 +13,11 @@ nav{
   
   nav span{
     color: #EF767A;
-    font-weight: 900;
+    font-weight: 700;
   }
   
   nav ul{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
   }
@@ -41,7 +39,7 @@ nav{
   }
   
   nav ul li{
-    padding: 0rem 5rem 0rem 5rem;
+    padding: 0rem 5rem;
   }
   
   nav ul li a:focus{

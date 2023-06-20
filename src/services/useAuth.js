@@ -40,7 +40,7 @@ const AuthProvider = ({children}) => {
             .catch(err => {
                 setIsLoading(false);
                 console.log(err);
-                if (err.status == 401) {
+                if (err.status === 401) {
                     setError("Incorrect username/password. Please try again.");
                 } else {
                     setError("An error has occurred. Please try again.");
@@ -76,7 +76,7 @@ const AuthProvider = ({children}) => {
                 (result) => {
                     setError(null);
                     setIsLoading(false);
-                    //setIsAuthed(true);
+                    setIsAuthed(true);
                     setUser({name: result.data.name, role: result.data.role});
                 })
             .catch(err => {
@@ -88,6 +88,7 @@ const AuthProvider = ({children}) => {
         <AuthContext.Provider value = {{error, isLoading, isAuthed, user, login, logout, signup}}>
             {children}
         </AuthContext.Provider>
-    )};
+    );
+};
 const useAuth = () => useContext(AuthContext);
 export {AuthProvider, useAuth};
