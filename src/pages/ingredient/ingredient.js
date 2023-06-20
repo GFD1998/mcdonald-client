@@ -4,29 +4,28 @@ import {useState, useEffect} from "react";
 import useXmlHttp from "../../services/useXmlHttp";
 import {useAuth} from "../../services/useAuth";
 import MenuStyles from "../styles/menu.module.css";
-
-const Allergen = () => {
+const Ingredient = () => {
     const {user} = useAuth();
     const {pathname} = useLocation();
-    const [subHeading, setSubHeading] = useState("All Allergens");
-    const url = settings.baseApiUrl + "/allergen";
+    const [subHeading, setSubHeading] = useState("All Ingredients");
+    const url = settings.baseApiUrl + "/ingredient";
 
     const {
         error,
         isLoading,
-        data: allergens
+        data: ingredient
     } = useXmlHttp(url, "GET", {Authorization:`Bearer ${user.jwt}`});
 
     useEffect(() => {
-        setSubHeading("All Allergens");
+        setSubHeading("All Ingredients");
     }, [pathname]);
     return (
        <>
            <div className="main-heading">
-               <div className="container">Allergens</div>
+               <div className="container">Ingredients</div>
            </div>
            <div className="sub-heading">
-               <div className="container">Welcome to the Allergens Dashboard</div>
+               <div className="container">Welcome to the Ingredients Dashboard</div>
            </div>
            <div className="main-content container">
                 
@@ -35,4 +34,4 @@ const Allergen = () => {
    );
 };
 
-export default Allergen;
+export default Ingredient;
